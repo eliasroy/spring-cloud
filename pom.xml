@@ -17,8 +17,10 @@
 		<maven.compile.source>17</maven.compile.source>
 		<maven.compile.target>17</maven.compile.target>
 		<project.builder.sourceEncoding>UTF-8</project.builder.sourceEncoding>
+		<spring-cloud.version>2023.0.2</spring-cloud.version>
 	</properties>
 	<modules>
+		<module>api-gateway</module>
 		<module>inventory-service</module>
 		<module>order-service</module>
 		<module>products-service</module>
@@ -26,7 +28,17 @@
 	<dependencies>
 
 	</dependencies>
-
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 
