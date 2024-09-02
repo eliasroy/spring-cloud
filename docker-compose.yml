@@ -44,6 +44,7 @@ services:
       - 5433
     command: -p 5432
 
+
     ### Postgres database for keycloak
   db-keycloak:
       container_name: db-keycloak
